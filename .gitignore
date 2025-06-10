@@ -1,0 +1,19 @@
+# Build artifacts
+*.o
+*.gcno
+*.gcda
+*.gcov
+program
+program_baremetal
+test_circ_buf
+test_command_manager
+test_protocol
+test_cvt
+test_sys_time
+
+# IDE and system files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store 

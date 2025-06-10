@@ -1,0 +1,50 @@
+{
+    "packets": [
+        {
+            "id": 1,
+            "description": "System Status Packet",
+            "items": [
+                {
+                    "name": "dropped_bytes",
+                    "offset": 0,
+                    "size": 8,
+                    "type": "TimedU32",
+                    "description": "Number of bytes dropped due to buffer overflow"
+                },
+                {
+                    "name": "task_error_count",
+                    "offset": 8,
+                    "size": 8,
+                    "type": "TimedU32",
+                    "description": "Number of task execution errors"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "description": "Command Statistics Packet",
+            "items": [
+                {
+                    "name": "cmd_success_count",
+                    "offset": 16,
+                    "size": 8,
+                    "type": "TimedU32",
+                    "description": "Number of successfully executed commands"
+                },
+                {
+                    "name": "cmd_failure_count",
+                    "offset": 24,
+                    "size": 8,
+                    "type": "TimedU32",
+                    "description": "Number of failed command executions"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "cvt_size": 32,
+        "version": "1.0",
+        "generated": "2024-03-19",
+        "description": "Telemetry configuration for the system"
+    }
+} 
