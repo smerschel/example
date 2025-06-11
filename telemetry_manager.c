@@ -131,6 +131,10 @@ bool TLM_Init(void) {
 
 ReturnCode TLM_HandlePacketRequest(const u8* payload, u32 length) {
     if (!is_initialized || payload == NULL || length < sizeof(tlm_request_telemetry_cmd)) {
+        u8* nak_packet = PRT_MakeNAK(REQUEST_TELEMETRY);
+        if (nak_packet != NULL) {
+            EXT_Send(nak_packet, PRT_GetPacketSize(0));
+        }
         return ERROR_INVALID_PARAMETER;
     }
 
@@ -148,12 +152,20 @@ ReturnCode TLM_HandlePacketRequest(const u8* payload, u32 length) {
     }
 
     if (packet == NULL) {
+        u8* nak_packet = PRT_MakeNAK(REQUEST_TELEMETRY);
+        if (nak_packet != NULL) {
+            EXT_Send(nak_packet, PRT_GetPacketSize(0));
+        }
         return ERROR_INVALID_PARAMETER;
     }
 
     // Get CVT pointer
     CVT* cvt = CVT_Get();
     if (cvt == NULL) {
+        u8* nak_packet = PRT_MakeNAK(REQUEST_TELEMETRY);
+        if (nak_packet != NULL) {
+            EXT_Send(nak_packet, PRT_GetPacketSize(0));
+        }
         return ERROR_UNKNOWN;
     }
 
@@ -173,11 +185,19 @@ ReturnCode TLM_HandlePacketRequest(const u8* payload, u32 length) {
     // Create and send the packet with REQUEST_TELEMETRY as command ID
     u8* packet_data = PRT_MakePacket(REQUEST_TELEMETRY, payload_buffer, payload_size);
     if (packet_data == NULL) {
+        u8* nak_packet = PRT_MakeNAK(REQUEST_TELEMETRY);
+        if (nak_packet != NULL) {
+            EXT_Send(nak_packet, PRT_GetPacketSize(0));
+        }
         return ERROR_UNKNOWN;
     }
 
     // Send the packet
     if (EXT_Send(packet_data, PRT_GetPacketSize(payload_size)) != SUCCESS) {
+        u8* nak_packet = PRT_MakeNAK(REQUEST_TELEMETRY);
+        if (nak_packet != NULL) {
+            EXT_Send(nak_packet, PRT_GetPacketSize(0));
+        }
         return ERROR_COMMUNICATION;
     }
 
