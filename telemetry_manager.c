@@ -2,6 +2,9 @@
 #include "sys_time.h"
 #include "protocol.h"
 #include "json.h"
+#include "command_manager.h"
+#include "packet_ids.h"
+#include "command_packets.h"
 #include <string.h>
 #include <stdio.h>
 
@@ -71,6 +74,12 @@ bool TLM_Init(void) {
         return true;
     }
 
+    // Register command handler for telemetry requests
+    ReturnCode result = CMD_RegisterHandler(REQUEST_TELEMETRY, TLM_HandlePacketRequest, true);
+    if (result != SUCCESS) {
+        return false;
+    }
+
     // Open configuration file
     FILE* config_file = fopen("telemetry_config.json", "r");
     if (!config_file) {
@@ -120,10 +129,14 @@ bool TLM_Init(void) {
     return true;
 }
 
-ReturnCode TLM_HandlePacketRequest(u8 packet_id) {
-    if (!is_initialized) {
-        return ERROR_UNKNOWN;
+ReturnCode TLM_HandlePacketRequest(const u8* payload, u32 length) {
+    if (!is_initialized || payload == NULL || length < sizeof(tlm_request_telemetry_cmd)) {
+        return ERROR_INVALID_PARAMETER;
     }
+
+    // Cast payload to command structure
+    const tlm_request_telemetry_cmd* cmd = (const tlm_request_telemetry_cmd*)payload;
+    u8 packet_id = cmd->packet_id;
 
     // Find the requested packet
     TlmPacketConfig* packet = NULL;
@@ -144,8 +157,11 @@ ReturnCode TLM_HandlePacketRequest(u8 packet_id) {
         return ERROR_UNKNOWN;
     }
 
-    // Build packet payload
+    // Build packet payload - start with packet_id
     u32 payload_size = 0;
+    payload_buffer[payload_size++] = packet_id;
+
+    // Add the requested telemetry items
     for (u32 i = 0; i < packet->num_items; i++) {
         TlmItemConfig* item = &packet->items[i];
         memcpy(payload_buffer + payload_size, 
@@ -154,8 +170,8 @@ ReturnCode TLM_HandlePacketRequest(u8 packet_id) {
         payload_size += item->size;
     }
 
-    // Create and send the packet
-    u8* packet_data = PRT_MakePacket(packet_id, payload_buffer, payload_size);
+    // Create and send the packet with REQUEST_TELEMETRY as command ID
+    u8* packet_data = PRT_MakePacket(REQUEST_TELEMETRY, payload_buffer, payload_size);
     if (packet_data == NULL) {
         return ERROR_UNKNOWN;
     }
