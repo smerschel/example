@@ -1,0 +1,414 @@
+SPDXVersion: SPDX-2.3
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+
+DocumentName: Example Embedded Systems Project SBOM - SAM V71 Target
+DocumentNamespace: https://github.com/smerschel/example
+Creator: Organization: Example Project Team
+Creator: Tool: Manual SBOM Generation
+Created: 2024-01-15T10:00:00Z
+
+##### Package Information
+
+PackageName: example-embedded-project-samv71
+SPDXID: SPDXRef-Package-example-embedded-project-samv71
+PackageVersion: 1.0.0
+PackageSupplier: Organization: Example Project Team
+PackageDownloadLocation: https://github.com/smerschel/example
+PackageHomePage: https://github.com/smerschel/example
+PackageSummary: Embedded systems project implementing command and telemetry system for SAM V71 microcontroller
+PackageDescription: This project implements a command and telemetry system for SAM V71 microcontrollers. It includes a circular buffer implementation, command manager, protocol handling, and system time management. Features include thread-safe circular buffer operations, command handling system, protocol implementation for packet handling, system time management, telemetry management, and comprehensive unit tests with coverage reporting. Cross-compiled for ARM Cortex-M7 architecture.
+PackageFileName: example-embedded-project-samv71-1.0.0.tar.gz
+PackageVerificationCode: 4e3211c67a2d28fced849ee1bb76e7391b93f125 (excludes: ./SPDXRef-File-example-project.spdx)
+PackageChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseInfoFromFiles: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+PackageComment: This is an embedded systems project demonstrating command and telemetry system implementation for SAM V71 microcontroller. #TODO: Verify licensing information for proprietary components.
+
+##### File Information
+
+FileName: ./main.c
+SPDXID: SPDXRef-File-main.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Main application entry point for SAM V71 target
+
+FileName: ./main.h
+SPDXID: SPDXRef-File-main.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+
+FileName: ./types.h
+SPDXID: SPDXRef-File-types.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Core type definitions and return codes for ARM Cortex-M7
+
+FileName: ./system_defs.h
+SPDXID: SPDXRef-File-system_defs.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: System-wide definitions and constants for SAM V71
+
+FileName: ./circ_buf.c
+SPDXID: SPDXRef-File-circ_buf.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Circular buffer implementation for bare metal ARM Cortex-M7
+
+FileName: ./circ_buf.h
+SPDXID: SPDXRef-File-circ_buf.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Circular buffer interface for ARM Cortex-M7
+
+FileName: ./bare_mutex.c
+SPDXID: SPDXRef-File-bare_mutex.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Bare metal mutex implementation for ARM Cortex-M7
+
+FileName: ./bare_mutex.h
+SPDXID: SPDXRef-File-bare_mutex.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Bare metal mutex interface for ARM Cortex-M7
+
+FileName: ./sys_time.c
+SPDXID: SPDXRef-File-sys_time.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: System time management implementation using SAM V71 timers
+
+FileName: ./sys_time.h
+SPDXID: SPDXRef-File-sys_time.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: System time management interface for SAM V71
+
+FileName: ./cvt.c
+SPDXID: SPDXRef-File-cvt.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Current Value Table implementation for SAM V71
+
+FileName: ./cvt.h
+SPDXID: SPDXRef-File-cvt.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Current Value Table interface for SAM V71
+
+FileName: ./packet.c
+SPDXID: SPDXRef-File-packet.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Packet structure implementation for SAM V71 communication
+
+FileName: ./packet.h
+SPDXID: SPDXRef-File-packet.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Packet structure interface for SAM V71 communication
+
+FileName: ./protocol.c
+SPDXID: SPDXRef-File-protocol.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Protocol implementation for packet handling on SAM V71
+
+FileName: ./protocol.h
+SPDXID: SPDXRef-File-protocol.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Protocol interface for SAM V71 communication
+
+FileName: ./command_manager.c
+SPDXID: SPDXRef-File-command_manager.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Command manager implementation for SAM V71
+
+FileName: ./command_manager.h
+SPDXID: SPDXRef-File-command_manager.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Command manager interface for SAM V71
+
+FileName: ./command_packets.h
+SPDXID: SPDXRef-File-command_packets.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Command packet structure definitions for SAM V71
+
+FileName: ./packet_ids.h
+SPDXID: SPDXRef-File-packet_ids.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Packet ID definitions for SAM V71 communication
+
+FileName: ./telemetry_manager.c
+SPDXID: SPDXRef-File-telemetry_manager.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Telemetry manager implementation for SAM V71
+
+FileName: ./telemetry_manager.h
+SPDXID: SPDXRef-File-telemetry_manager.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Telemetry manager interface for SAM V71
+
+FileName: ./external_interface.c
+SPDXID: SPDXRef-File-external_interface.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: External interface implementation using SAM V71 UART/SPI/I2C
+
+FileName: ./external_interface.h
+SPDXID: SPDXRef-File-external_interface.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: External interface interface for SAM V71 communication
+
+FileName: ./json.c
+SPDXID: SPDXRef-File-json.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: JSON parsing implementation optimized for SAM V71
+
+FileName: ./json.h
+SPDXID: SPDXRef-File-json.h
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: JSON parsing interface for SAM V71
+
+FileName: ./telemetry_config.json
+SPDXID: SPDXRef-File-telemetry_config.json
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Telemetry configuration file for SAM V71
+
+FileName: ./Makefile
+SPDXID: SPDXRef-File-Makefile
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Build system configuration for SAM V71 cross-compilation
+
+FileName: ./README.md
+SPDXID: SPDXRef-File-README.md
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Project documentation for SAM V71 target
+
+FileName: ./test_main.c
+SPDXID: SPDXRef-File-test_main.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Main test program for SAM V71 target
+
+FileName: ./test_circ_buf.c
+SPDXID: SPDXRef-File-test_circ_buf.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Circular buffer unit tests for SAM V71
+
+FileName: ./test_command_manager.c
+SPDXID: SPDXRef-File-test_command_manager.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Command manager unit tests for SAM V71
+
+FileName: ./test_protocol.c
+SPDXID: SPDXRef-File-test_protocol.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: Protocol unit tests for SAM V71
+
+FileName: ./test_cvt.c
+SPDXID: SPDXRef-File-test_cvt.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: CVT unit tests for SAM V71
+
+FileName: ./test_sys_time.c
+SPDXID: SPDXRef-File-test_sys_time.c
+FileChecksum: SHA256: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+FileComment: System time unit tests for SAM V71
+
+##### External Dependencies
+
+ExternalRef: PACKAGE-MANAGER pkg:gcc/arm-none-eabi-gcc@11.3-2022.07
+ExternalRefComment: ARM GCC cross-compiler for SAM V71 (ARM Cortex-M7)
+
+ExternalRef: PACKAGE-MANAGER pkg:make/make@4.3
+ExternalRefComment: GNU Make build system
+
+ExternalRef: PACKAGE-MANAGER pkg:openocd/openocd@0.12.0
+ExternalRefComment: OpenOCD for SAM V71 debugging and programming
+
+ExternalRef: PACKAGE-MANAGER pkg:atmel/samv71b-xplained-ultra@1.0
+ExternalRefComment: SAM V71B Xplained Ultra board support package
+
+ExternalRef: PACKAGE-MANAGER pkg:atmel/asf@3.50.0
+ExternalRefComment: Atmel Software Framework for SAM V71 peripherals
+
+ExternalRef: PACKAGE-MANAGER pkg:newlib/newlib@4.2.0
+ExternalRefComment: Newlib C library for ARM bare metal development
+
+ExternalRef: PACKAGE-MANAGER pkg:binutils/arm-none-eabi-binutils@2.38
+ExternalRefComment: ARM binary utilities for cross-compilation
+
+##### Relationships
+
+Relationship: SPDXRef-DOCUMENT DESCRIBES SPDXRef-Package-example-embedded-project-samv71
+
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-main.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-main.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-types.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-system_defs.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-circ_buf.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-circ_buf.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-bare_mutex.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-bare_mutex.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-sys_time.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-sys_time.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-cvt.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-cvt.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-packet.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-packet.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-protocol.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-protocol.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-command_manager.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-command_manager.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-command_packets.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-packet_ids.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-telemetry_manager.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-telemetry_manager.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-external_interface.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-external_interface.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-json.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-json.h
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-telemetry_config.json
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-Makefile
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-README.md
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-test_main.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-test_circ_buf.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-test_command_manager.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-test_protocol.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-test_cvt.c
+Relationship: SPDXRef-Package-example-embedded-project-samv71 CONTAINS SPDXRef-File-test_sys_time.c
+
+##### Snippet Information
+
+SnippetSPDXID: SPDXRef-Snippet-example-embedded-project-main
+SnippetFromFile: SPDXRef-File-main.c
+SnippetByteRange: 1:48
+SnippetLineRange: 1:48
+SnippetLicenseConcluded: NOASSERTION
+SnippetCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+SnippetComment: Main application entry point with initialization and main loop for SAM V71
+
+SnippetSPDXID: SPDXRef-Snippet-example-embedded-project-circ-buf
+SnippetFromFile: SPDXRef-File-circ_buf.c
+SnippetByteRange: 1:110
+SnippetLineRange: 1:110
+SnippetLicenseConcluded: NOASSERTION
+SnippetCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+SnippetComment: Thread-safe circular buffer implementation with mutex protection for ARM Cortex-M7
+
+SnippetSPDXID: SPDXRef-Snippet-example-embedded-project-command-manager
+SnippetFromFile: SPDXRef-File-command_manager.c
+SnippetByteRange: 1:89
+SnippetLineRange: 1:89
+SnippetLicenseConcluded: NOASSERTION
+SnippetCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+SnippetComment: Command manager with handler registration and processing for SAM V71
+
+SnippetSPDXID: SPDXRef-Snippet-example-embedded-project-telemetry-manager
+SnippetFromFile: SPDXRef-File-telemetry_manager.c
+SnippetByteRange: 1:206
+SnippetLineRange: 1:206
+SnippetLicenseConcluded: NOASSERTION
+SnippetCopyrightText: Copyright (c) 2024 Example Project Team - PROPRIETARY SOFTWARE
+SnippetComment: Telemetry manager with packet configuration and request handling for SAM V71
+
+##### Annotation Information
+
+Annotator: Organization: Example Project Team
+AnnotationDate: 2024-01-15T10:00:00Z
+AnnotationType: REVIEW
+AnnotationComment: SBOM generated for embedded systems project with command and telemetry functionality targeting SAM V71 microcontroller. #TODO: Verify licensing information for proprietary components and third-party dependencies.
+SPDXREF: SPDXRef-DOCUMENT 
